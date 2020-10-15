@@ -9,10 +9,10 @@ jobs:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
       - run:
-          name: install-npm
+          working_directory: ~/web
+          name: install-dependencies
           command: npm install
-          paths:
-            - ~/web/node_modules
+          cache-path: node_modules
       - run:
           name: build-project
           command: npm run build
