@@ -1,20 +1,22 @@
-version: 2.17
+version: 2
 jobs:
   build:
     docker:
       - image: circleci/node:12.19
+
+    working_directory: ~/happy
+
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
-      - run:
-          working_directory: ~/web
-          name: install-dependencies
-          command: npm install
-          cache-path: node_modules
-      - run:
-          name: build-project
-          command: npm run build
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
           paths:
-            - ~/web
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
