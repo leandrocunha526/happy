@@ -11,7 +11,7 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-{{ checksum "web/package.json" }}
           - v1-dependencies-
 
       - run: yarn install
@@ -19,4 +19,4 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "web/package.json" }}
