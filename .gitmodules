@@ -1,0 +1,6 @@
+[submodule "web"]
+    path = web
+    url = git@github.com:leandrocunha526/happy.git
+[submodule "backend"]
+    path = backend
+    url = git@github.com:leandrocunha/happy.git
