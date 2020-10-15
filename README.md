@@ -11,7 +11,7 @@ Cadastre orfanatos em sua localidade para fazer o dia de uma criança mais feliz
 - Figma
 
 ```sh
-$ git clone git@github.com:leandrocunha526/happy-nlw3.git
+$ git clone git@github.com:leandrocunha526/happy.git
 
 $ cd web or backend
 
