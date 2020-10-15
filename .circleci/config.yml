@@ -12,7 +12,7 @@ jobs:
           name: install-npm
           command: npm install
           paths:
-            - ./web
+            - web
             - ./node_modules
       - run:
           name: build-project
