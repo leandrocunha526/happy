@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) Facebook, Inc. and its affiliates.
+Copyright (c) Facebook, Inc. and its affiliates.  
 Copyright (c) Leandro Cunha
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
