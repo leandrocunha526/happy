@@ -44,7 +44,7 @@ $ yarn start
 # :books: Docs
 - [React](https://reactjs.org/docs/getting-started.html)
 - [NodeJS](https://nodejs.org/en/docs/)
-- [Mardown](https://guides.github.com/features/mastering-markdown/)
+- [Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Layout on Figma](https://www.notion.so/Layout-Happy-OmniStack-faac4d4d638343fe8bab627125a7557c)
 - [Configuração de ambiente](https://www.notion.so/Configurando-o-ambiente-953aad022cda4fbcb149be2bfe793995)
 
