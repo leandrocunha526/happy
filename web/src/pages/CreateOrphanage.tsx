@@ -69,7 +69,8 @@ export default function CreateOrphanage(){
                     zoom={15}
                     onClick={handleMapClick}
                     >
-                 <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/>                                                                                                                                                                                                                                                                                                                          
+
+                 <TileLayer url={`https://a.tile.openstreetmap.org/{z}/{x}/{y}.png`}/>                                                                                                                                                                                                                                                                                                                          
                     
                     {position.latitude !== 0 && (
                      <Marker 
@@ -97,6 +98,7 @@ export default function CreateOrphanage(){
                 onChange={(e) => setAbout(e.target.value)}
                 />
            </div>
+
             <div className="input-block">
                 <label htmlFor="images">Fotos</label>
                 <div className="images-container">
@@ -108,6 +110,7 @@ export default function CreateOrphanage(){
                     <FiPlus size={24} color="#15b6d6"/>
                 </label>
                 </div>
+
             <input 
             multiple 
             onChange={handleSelectImages}
@@ -115,6 +118,7 @@ export default function CreateOrphanage(){
             id="image[]"
             />
             </div>    
+            
          </fieldset>
 
         <fieldset>
@@ -163,6 +167,6 @@ export default function CreateOrphanage(){
         </button>
         </form>
           </main>
-      </div>
+        </div>
     );
 }

@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --white: white;
 }
 
 body{
-    color: #fff;
+    color: var(--white);
     background: #ebf2f5;
 }
 

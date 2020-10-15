@@ -1,38 +1,29 @@
 #page-map {
   width: 100vw;
   height: 100vh;
-
   position: relative;
   display: flex;
 }
 
 #page-map aside {
   width: 440px;
-  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
   padding: 80px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
 }
 
 #page-map aside h2 {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 800;
   line-height: 42px;
   margin-top: 64px;
 }
 
 #page-map aside p {
-  line-height: 28px;
+  line-height: 20px;
   margin-top: 24px;
-}
-
-#page-map aside footer {
-  display: flex;
-  flex-direction: column;
-
-  line-height: 24px;
 }
 
 #page-map aside footer strong {
@@ -40,61 +31,55 @@
 }
 
 #page-map .leaflet-container {
-  z-index: 5;
+  z-index: 1;
 }
 
 #page-map .create-orphanage {
-  z-index: 10;
-
   position: absolute;
-  right: 40px;
-  bottom: 40px;
-
+  right: 48px;
+  bottom: 48px;
   width: 64px;
   height: 64px;
-  background: #15c3d6;
-  border-radius: 20px;
-
+  background-color: #15c3d6;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 20px;
   transition: background-color 0.2s;
+  z-index: 2;
 }
 
 #page-map .create-orphanage:hover {
-  background: #17d6eb;
+  background-color: #17d7eb;
 }
 
-#page-map .map-popup .leaflet-popup-content {
-  color: #0089a5;
+#page-map .mapPopup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+#page-map .mapPopup .leaflet-popup-content {
+  color: #0889a5;
   font-size: 20px;
   font-weight: bold;
   margin: 8px 12px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#page-map .map-popup .leaflet-popup-content-wrapper {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  box-shadow: none;
-}
-
-#page-map .map-popup .leaflet-popup-tip-container {
-  display: none;
-}
-
-#page-map .map-popup .leaflet-popup-content a {
+#page-map .mapPopup .leaflet-popup-content a {
   width: 40px;
-  height: 40px;
-  background: #15c3d6;
-  box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
+  height: 48px;
+  background-color: #15c3d6;
+  box-shadow: 17px 27px 41px rgba(23, 142, 166, 0.16);
   border-radius: 12px;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+#page-map .mapPopup .leaflet-popup-tip-container {
+  display: none;
 }
