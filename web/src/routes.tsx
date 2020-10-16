@@ -15,6 +15,7 @@ const Routes: React.FC = () => {
     <Route path="/app" component={OrphanagesMap}/>
     <Route path="/orphanages/create" component={CreateOrphanage}/>
     <Route path="/orphanages/:id" component={Orphanage}/>
+    <Route path="*" component={() => <h1>Error 404 not found</h1>}/>
     </Switch>
     </BrowserRouter>
     );
