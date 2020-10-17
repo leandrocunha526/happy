@@ -1,4 +1,4 @@
-# Happy
+# <center>![layout](.github/logo.svg)</center>
 
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank">
@@ -12,9 +12,9 @@
   </a>
 </p>
 
-![happy](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6db6fcb6-7c26-4595-8b97-f42c6669f11c%2FComponent_1.png?table=block&id=faac4d4d-6383-43fe-8bab-627125a7557c&width=2730&userId=&cache=v2)
+# :computer: Projeto
 
-Cadastre orfanatos em sua localidade para fazer o dia de uma criança mais feliz.
+O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz. purple_heart
 
 # :fire: Projeto utiliza
 - NodeJS
