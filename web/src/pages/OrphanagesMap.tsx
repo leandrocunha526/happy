@@ -29,7 +29,7 @@ function OrphanageMap() {
   console.log(orphanages);
 
   useEffect(() => {
-    api.get('orfanatos').then((response) => {
+    api.get('orphanages').then((response) => {
       setOrphanages(response.data);
     })
   }, []);
@@ -59,7 +59,7 @@ function OrphanageMap() {
             >
               <Popup closeButton={false} minWidth={240} maxWidth={240} className="mapPopup">
               {orphanage.name}
-                <Link to={`/orfanatos/${orphanage.id}`}>
+                <Link to={`/orphanages/${orphanage.id}`}>
                   <FiArrowRight size={20} color="#FFF"/>
                 </Link>
               </Popup>

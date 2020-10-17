@@ -135,7 +135,7 @@ export default function CreateOrphanage(){
       
             <div className="input-block">
                 <label htmlFor="opening_hours">Horário de Funcionamento</label>
-                <textarea
+                <input
                 id="opening_hours"
                 value={opening_hours}
                 onChange={(e) => setOpeningHours(e.target.value)}

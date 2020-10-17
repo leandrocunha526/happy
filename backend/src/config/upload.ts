@@ -5,7 +5,7 @@ export default{
     storage: multer.diskStorage({
         destination: path.join(__dirname, "...", "...", "uploads"),
         filename: (request, file, cb) =>{
-            const fileName = `{Data.now()-${file.originalname}}`;
+            const fileName = `${Date.now()}-${file.originalname.trim}`;
             cb(null, fileName);
         }
     })

@@ -25,6 +25,9 @@ O Happy é uma aplicação que conecta pessoas à casas de acolhimento instituci
 - React
 - TypeScript
 - Figma
+- TypeORM
+- Express
+- SQLite
 
 # :rocket: Instruções para executar o projeto
 
@@ -51,6 +54,9 @@ $ yarn start
 - [Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Layout on Figma](https://www.notion.so/Layout-Happy-OmniStack-faac4d4d638343fe8bab627125a7557c)
 - [Configuração de ambiente](https://www.notion.so/Configurando-o-ambiente-953aad022cda4fbcb149be2bfe793995)
+- [TypeORM](https://typeorm.io/#/)
+- [Express](https://expressjs.com/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 # :memo: License
 Leia [LICENSE](LICENSE.md)
