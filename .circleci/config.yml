@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  install-deps:
     docker:
       - image: circleci/node:12.19
 
@@ -21,5 +21,5 @@ jobs:
             - web
             - node_modules
           key: v1-dependencies-{{ checksum "web/package.json" }}
-      
+      - build:
       - run: npm run build
