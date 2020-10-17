@@ -1,21 +1,13 @@
 version: 2.1
 
 jobs:
-  cloud-functions:
+  build-project:
     docker:
       - image: circleci/node:12.19.0
 
     working_directory: ~/happy/web
 
     steps:
-      - checkout
-      - run: npm install
-   
-  web:
-    docker:
-      - image: circleci/node:12.19.0
-
-    working_directory: ~/happy/web
       - checkout
       - run: npm install
       - run: npm run lint
