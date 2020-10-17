@@ -1,4 +1,6 @@
-# <center>![layout](.github/logo.svg)</center>
+<h1 align="center">
+    <img alt="Happy" title="Happy" src=".github/logo.svg" />
+</h1>
 
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank">
@@ -11,6 +13,8 @@
     <img alt="LICENSE" src="https://img.shields.io/github/license/vitorserrano/task-manager?color=7159C1">
   </a>
 </p>
+
+![layout](.github/happy.png)
 
 # :computer: Projeto
 
