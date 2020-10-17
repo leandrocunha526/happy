@@ -21,8 +21,5 @@ jobs:
             - web
             - node_modules
           key: v1-dependencies-{{ checksum "web/package.json" }}
-        
-      - build:
-          paths: 
-            - web
+      
       - run: npm run build
