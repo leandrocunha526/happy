@@ -1,11 +1,10 @@
 version: 2
 jobs:
-  install-deps:
+  install-dep:
     docker:
-      - image: circleci/node:12.19
+      - image: circleci/node:12.19.0
 
-    working_directory: ~/happy
-
+    working_directory: ~/happy/web
     steps:
       - checkout
 
@@ -18,8 +17,21 @@ jobs:
 
       - save_cache:
           paths:
-            - web
             - node_modules
           key: v1-dependencies-{{ checksum "web/package.json" }}
-      - build:
-      - run: npm run build
+
+  build:
+    docker:
+      - image: circleci/node:12.19.0
+
+    working_directory: ~/happy/web
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - run: yarn run build
