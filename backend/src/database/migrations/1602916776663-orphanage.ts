@@ -5,7 +5,7 @@ export class orphanage1602916776663 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-              name: 'orphanages',
+              name: 'orphanage',
               columns: [
                 {
                   name: 'id',

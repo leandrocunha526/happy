@@ -10,7 +10,7 @@ export default {
     const orphanagesRepository = getRepository(Orphanage);
 
     const orphanages = await orphanagesRepository.find({
-      relations: ['images'],
+      relations: ['image'],
     });
 
     return res.json(orphanageView.renderMany(orphanages));
@@ -21,7 +21,7 @@ export default {
     const orphanagesRepository = getRepository(Orphanage);
 
     const orphanage = await orphanagesRepository.findOneOrFail(id, {
-      relations: ['images'],
+      relations: ['image'],
     });
 
     return res.json(orphanageView.render(orphanage));
@@ -31,7 +31,7 @@ export default {
 
     const requestImages = req.files as Express.Multer.File[];
 
-    const images = requestImages.map((image) => {
+    const image = requestImages.map((image) => {
       return { path: image.filename };
     });
 
@@ -43,7 +43,7 @@ export default {
       instructions: Yup.string().required(),
       opening_hours: Yup.string().required(),
       open_on_weekends: Yup.boolean().required(),
-      images: Yup.array(
+      image: Yup.array(
         Yup.object().shape({
           path: Yup.string().required(),
         })
@@ -54,14 +54,14 @@ export default {
     open_on_weekends = open_on_weekends.toLowerCase() === 'true';
 
     await schema.validate(
-      { ...req.body, open_on_weekends, images },
+      { ...req.body, open_on_weekends, image },
       { abortEarly: false }
     );
 
     const orphanage = orphanagesRepository.create({
       ...req.body,
       open_on_weekends,
-      images,
+      image,
     });
 
     await orphanagesRepository.save(orphanage);

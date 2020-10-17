@@ -8,7 +8,7 @@ import {
 
 import Image from "./Image";
 
-@Entity('orphanages')
+@Entity('orphanage')
 export default class Orphanage{
 
     @PrimaryGeneratedColumn("increment")
@@ -40,5 +40,5 @@ export default class Orphanage{
     })
 
     @JoinColumn({name:"orphanage_id"})
-    images: Image[];
+    image: Image[];
 }
