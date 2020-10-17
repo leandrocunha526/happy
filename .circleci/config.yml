@@ -1,19 +1,29 @@
-version: 2.17
+version: 2.1
+
 jobs:
-  build:
+  cloud-functions:
     docker:
       - image: circleci/node:12.19.0
+
     working_directory: ~/happy/web
+
     steps:
       - checkout
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
-      - run:
-          name: install-npm
-          command: npm install
-          paths:
-            - ./node_modules
-      - run:
-          name: build-project
-          command: npm run build       
+      - run: npm install
+   
+  web:
+    docker:
+      - image: circleci/node:12.19.0
+
+    working_directory: ~/happy/web
+      - checkout
+      - run: cd web && npm install
+      - run: cd web && npm run lint
+      - run: cd web && npm run build
+
+workflows:
+  version: 2
+  concurrently:
+    jobs:
+      - cloud-functions
+      - web
