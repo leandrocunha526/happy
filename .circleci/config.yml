@@ -4,11 +4,15 @@ jobs:
   build-project:
     docker:
       - image: circleci/node:12.19.0
-
     working_directory: ~/happy/web
-
     steps:
       - checkout
       - run: npm install
       - run: npm run lint
       - run: npm run build
+      
+workflows:
+  version: 2.1
+  workflow:
+    jobs:
+    - build-project
