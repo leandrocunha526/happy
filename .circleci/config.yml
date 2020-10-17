@@ -17,13 +17,6 @@ jobs:
 
     working_directory: ~/happy/web
       - checkout
-      - run: cd web && npm install
-      - run: cd web && npm run lint
-      - run: cd web && npm run build
-
-workflows:
-  version: 2
-  concurrently:
-    jobs:
-      - cloud-functions
-      - web
+      - run: npm install
+      - run: npm run lint
+      - run: npm run build
