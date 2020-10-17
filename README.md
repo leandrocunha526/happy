@@ -18,7 +18,7 @@
 
 # :computer: Projeto
 
-O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz. purple_heart
+O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz.
 
 # :fire: Projeto utiliza
 - NodeJS
