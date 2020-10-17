@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node:12.19
 
-    working_directory: ~/happy
+    working_directory: ~/happy/web
 
     steps:
       - checkout
@@ -20,3 +20,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "web/package.json" }}
+        
+      - build:
+      - run: npm run build
