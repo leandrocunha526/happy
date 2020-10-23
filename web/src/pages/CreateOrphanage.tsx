@@ -35,7 +35,7 @@ export default function CreateOrphanage(){
         });
         setPreviewImages(selectedImagesPreview);
     };
-    const handleSubmit = async (event:FormEvent) =>{
+    const handleSubmit = async (event: FormEvent) =>{
         event.preventDefault();
         const {latitude, longitude} = position;
         const data = new FormData();
@@ -149,22 +149,15 @@ export default function CreateOrphanage(){
                 <button
                 type="button"
                 className={open_on_weekends ? "active" : ""}
-                onClick={() => setOpenWeekends(true)}
-                >Sim</button>
-
+                onClick={() => setOpenWeekends(true)}>Sim</button>
             <button
             type="button"
             className={!open_on_weekends ? "active" : ""}
-            onClick={() => setOpenWeekends(false)} 
-            >
-                Não
-            </button>
+            onClick={() => setOpenWeekends(false)}>Não</button>
             </div>
             </div>
         </fieldset>
-        <button className="confirm-button" type="submit">
-            Confirmar
-        </button>
+        <button className="confirm-button" type="submit">Confirmar</button>
         </form>
           </main>
         </div>
