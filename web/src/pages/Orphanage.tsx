@@ -113,8 +113,9 @@ export default function Orphanage() {
 
             <div className="open-details">
               <div className="hour">
-                <FiClock size={32} color="#15B6D6" />
-                Horário de funcionamento<br/>{orphanage.opening_hours}
+                <FiClock size={32} color="#15B6D6"/>
+                Horário de funcionamento<br/>
+                {orphanage.opening_hours}
               </div>
               
               {orphanage.open_on_weekends ? (
