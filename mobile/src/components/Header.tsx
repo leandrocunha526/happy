@@ -31,8 +31,8 @@ const Header: React.FC<HeaderProps> = ({ title, showCancel = true }) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroudColor: "#f9fafc",
-    borderBottonWidth: 1,
+    backgroundColor: "#f9fafc",
+    borderBottomWidth: 1,
     borderColor: "#dde3f0",
     flexDirection: "row",
     justifyContent: "space-between",
