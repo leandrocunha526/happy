@@ -26,7 +26,7 @@ interface Orphanage {
 interface OrphanageParams {
   id: string;
 }
-
+// eslint-disable-next-line
 export default function Orphanage() {
   const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>();
