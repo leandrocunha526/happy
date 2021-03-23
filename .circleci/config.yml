@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-project:
     docker:
-      - image: circleci/node:12.19.0
+      - image: circleci/node:14.16.0
     working_directory: ~/happy
     steps:
       - checkout
