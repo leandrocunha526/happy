@@ -2,6 +2,8 @@
     <img alt="Happy" title="Happy" src=".github/logo.svg" />
 </h1>
 
+🚧 **The Happy project has old and unsupported dependencies** 🚧
+
 <p align="center">
   <a href="https://nodejs.org/en/" target="_blank">
     <img alt="Node.js version" src="https://img.shields.io/badge/node-v12.19.0-brightgreen">
